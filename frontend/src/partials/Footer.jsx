@@ -1,36 +1,38 @@
 import React from 'react';
 
+import logo_oscuro from "../img/logo_fondo_oscuro.png";
+
 const Footer = () => {
     return (
-        <div className="container-fluid align-content-between py-5">
-            <div className="row">
+        <div className="container-fluid align-content-between p-5 bg-primary">
+            <div className="row text-center">
                 <div className="col-4">
-                    <h5>AUTOTRUX</h5>
+                    <h5 className="mb-4" style={{ color: "#fff" }}>AUTOTRUX</h5>
                     <div>
-                        <img className="img-fluid w-75" src="img/AUTOTRUX_LOGO.png" alt="Logo Autotrux" />
-                        <p>Gracias por visitar nuestro sitio web.</p>
+                        <img className="img-fluid" style={{ width: "150px" }} src={logo_oscuro} alt="Logo Autotrux" />
+                        <p className="text-muted">Gracias por visitar nuestro sitio web. visitar nuestro sitio web. visitar nuestro sitio web. visitar nuestro sitio web.</p>
                     </div>
                 </div>
                 <div className="col-4">
-                    <h5>MAPA DE SITIO</h5>
+                    <h5 className="mb-4" style={{ color: "#fff" }}>MAPA DE SITIO</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Inicio</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Nosotros</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Vehículos</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Clientes</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Testimonios</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Contáctanos</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Inicio</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Nosotros</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Vehículos</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Clientes</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Testimonios</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Contáctanos</a></li>
                     </ul>
                 </div>
                 <div className="col-4">
-                    <h5>CONTÁCTANOS</h5>
+                    <h5 className="mb-4" style={{ color: "#fff" }}>CONTÁCTANOS</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Dirección</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Teléfono</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Whatsapp</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Facebook</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Instagram</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Correo</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Dirección</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Teléfono</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Whatsapp</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Facebook</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Instagram</a></li>
+                        <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Correo</a></li>
                     </ul>
                 </div>
             </div>
