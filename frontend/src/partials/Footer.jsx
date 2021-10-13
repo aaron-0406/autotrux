@@ -7,7 +7,6 @@ const Footer = () => {
         <div className="container-fluid align-content-between p-5 bg-primary">
             <div className="row text-center">
                 <div className="col-4">
-                    <h5 className="mb-4" style={{ color: "#fff" }}>AUTOTRUX</h5>
                     <div>
                         <img className="img-fluid" style={{ width: "150px" }} src={logo_oscuro} alt="Logo Autotrux" />
                         <p className="text-muted">Gracias por visitar nuestro sitio web. visitar nuestro sitio web. visitar nuestro sitio web. visitar nuestro sitio web.</p>

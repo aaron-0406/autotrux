@@ -1,8 +1,13 @@
 import React from "react";
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
-import Contact from "../pages/Contact";
+import Nosotros from "../pages/Nosotros";
+import Clientes from "../pages/Clientes";
+import Contactanos from "../pages/Contactanos";
+import Login from "../pages/Login";
+
+import NotFound from "../pages/NotFound";
 
 import LayoutUsuario from "../partials/LayoutUsuario";
 
@@ -11,7 +16,12 @@ function App() {
         <BrowserRouter>
             <Switch>
                 <LayoutUsuario exact path="/" component={Home} />
-                <LayoutUsuario exact path="/contact" component={Contact} />
+                <LayoutUsuario exact path="/nosotros" component={Nosotros} />
+                <LayoutUsuario exact path="/clientes" component={Clientes} />
+                <LayoutUsuario exact path="/contactanos" component={Contactanos} />
+                <Route exact path="/login" component={Login} />
+
+                <Route component={NotFound} />
             </Switch>
         </BrowserRouter>
     )
