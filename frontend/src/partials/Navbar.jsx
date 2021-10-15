@@ -10,7 +10,7 @@ import logo from "../img/logo.png";
 
 const Navbar = () => {
     return (
-        <nav className="navbar w-100 navbar-expand-lg navbar-light bg-light p-0">
+        <nav className="navbar w-100 navbar-expand-lg navbar-light bg-light p-0 shadow">
             <div className="container-fluid">
                 <div className="h-100 mx-3 me-5">
                     <img className="img-fluid" style={{ width: "100px" }} src={logo} alt="logo autotrux" />
