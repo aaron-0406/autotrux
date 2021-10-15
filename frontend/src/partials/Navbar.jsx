@@ -43,12 +43,12 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div>
-                        <button type="button" className="btn btn-primary mx-2"><FontAwesomeIcon
+                        <Link to="/login" type="button" className="btn btn-primary mx-2"><FontAwesomeIcon
                             className="mx-2"
                             icon={faSignInAlt}
                             color="#fff"
                             size="lg"
-                        />INICIAR SESIÓN</button>
+                        />INICIAR SESIÓN</Link>
                         <button type="button" className="btn btn-info">REGISTRATE</button>
                     </div>
                 </div>
