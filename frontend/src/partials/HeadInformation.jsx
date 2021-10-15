@@ -3,7 +3,7 @@ import React from 'react';
 // Iconos
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faGlobeAmericas, faEnvelope, faSignInAlt
+    faGlobeAmericas, faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
