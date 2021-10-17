@@ -5,13 +5,19 @@ import {
     faPhoneAlt, faEnvelope, faClock
 } from "@fortawesome/free-solid-svg-icons";
 
+//Toast
+import { toast, ToastContainer } from "react-toastify";
+
+//Services
+import { sendMessage } from "../services/ContactoServices";
+
 const Contactanos = () => {
     const initialState = {
-        nombre_contacto: "",
-        email_contacto: "",
-        telefono_contacto: "",
-        text: "",
-        visto: 1,
+        nombre: "",
+        email: "",
+        telefono: "",
+        mensaje: "",
+        estado_visto: 1,
     };
 
     // State
@@ -20,6 +26,10 @@ const Contactanos = () => {
     // Evento submit
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const res = await sendMessage(contact);
+        if (res.data.error) return toast.error(res.data.error);
+        toast.success(res.data.success);
+        return setContact(initialState);
     };
 
     // Change Input
@@ -29,6 +39,7 @@ const Contactanos = () => {
 
     return (
         <>
+            <ToastContainer />
             <div className="shadow" style={{ background: "#F7F7F9" }}>
                 <div className="row container mx-auto">
                     <div className="col-md-4 my-4">
@@ -87,16 +98,16 @@ const Contactanos = () => {
                         ¡Contáctanos ahora!
                     </p>
                     <form onSubmit={handleSubmit}>
-                        <input type="text" value={contact.nombre_contacto} className="form-control" name="nombre_contacto" placeholder="Nombre Completo" onChange={handleChange} autoFocus />
+                        <input type="text" value={contact.nombre} className="form-control" name="nombre" placeholder="Nombre Completo" onChange={handleChange} autoFocus />
 
                         <br />
-                        <input type="email" value={contact.email_contacto} className="form-control" name="email_contacto" placeholder="E - mail" onChange={handleChange} />
+                        <input type="email" value={contact.email} className="form-control" name="email" placeholder="E - mail" onChange={handleChange} />
 
                         <br />
-                        <input type="text" value={contact.telefono_contacto} className="form-control" name="telefono_contacto" placeholder="Teléfono" onChange={handleChange} />
+                        <input type="text" value={contact.telefono} className="form-control" name="telefono" placeholder="Teléfono" onChange={handleChange} />
 
                         <br />
-                        <textarea name="text" value={contact.text} rows={4} className="form-control" placeholder="Mensaje" onChange={handleChange}></textarea>
+                        <textarea name="mensaje" value={contact.mensaje} rows={4} className="form-control" placeholder="Mensaje" onChange={handleChange}></textarea>
                         <br />
                         <button className="btn btn-block w-100 btn-info">
                             Enviar
