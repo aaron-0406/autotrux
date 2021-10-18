@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import slide1 from "../img/slide1.png";
 import slide2 from "../img/slide2.png";
@@ -42,13 +43,13 @@ const Home = () => {
                 <div className="row text-center p-3">
                     <div className="col-md-6 p-3">
                         <h2 className="text-center">AUTOS</h2>
-                        <img src={aside1}  className="img-fluid" alt="Autos" />
-                        <a href="#" className="btn btn-primary">Autos</a>
+                        <img src={aside1} className="img-fluid" alt="Autos" />
+                        <Link to="/autos" className="btn btn-primary">Autos</Link>
                     </div>
                     <div className="col-md-6 p-3">
                         <h2 className="text-center">CAMIONETAS</h2>
-                        <img src={aside2}  className="img-fluid" alt="Camionetas" />
-                        <a href="#" className="btn btn-primary">Camionetas</a>
+                        <img src={aside2} className="img-fluid" alt="Camionetas" />
+                        <Link to="/camionetas" className="btn btn-primary">Camionetas</Link>
                     </div>
                 </div>
             </div>
