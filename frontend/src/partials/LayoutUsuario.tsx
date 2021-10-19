@@ -7,8 +7,13 @@ import FooterCopyright from "./FooterCopyright";
 import HeadInformation from "./HeadInformation";
 import Navbar from "./Navbar";
 
+interface PrivateRouteProps {
+    component: any;
+    exact: boolean;
+    path: string;
+}
 
-const UsuarioLayout = ({ children, ...rest }) => {
+const UsuarioLayout: React.FC = ({ children, ...rest }) => {
     return (
         <>
             <HeadInformation />
@@ -19,7 +24,7 @@ const UsuarioLayout = ({ children, ...rest }) => {
         </>
     );
 };
-const LayoutUsuario = (props) => {
+const LayoutUsuario: React.FC<PrivateRouteProps> = (props) => {
     const { component: Component, exact, path, ...rest } = props;
     return (
         <Route

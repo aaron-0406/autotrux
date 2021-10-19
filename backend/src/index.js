@@ -50,6 +50,7 @@ app.use(async (req, res, next) => {
 
 //routes
 app.use("/api/v0/contacto", require("./routes/contacto.routes"));
+app.use("/api/v0/usuario", require("./routes/usuario.routes"));
 app.use(require("./routes/authentication.routes"));
 app.use(require("./routes/index.routes"));
 

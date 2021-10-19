@@ -10,7 +10,6 @@ router.post("/signin", (req, res, next) => {
 
         req.logIn(user, function (err) {
             if (err) return res.json(err);
-            user.authenticate = true;
             return res.json({ success: "Sesión Iniciada", user: user });
         });
     })(req, res, next);
