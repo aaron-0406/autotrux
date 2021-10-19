@@ -4,7 +4,7 @@ import logo_oscuro from "../img/logo_fondo_oscuro.png";
 
 const Footer = () => {
     return (
-        <div className="container-fluid align-content-between p-5 bg-primary">
+        <div className="container-fluid align-content-between p-5 bg-black">
             <div className="row text-center">
                 <div className="col-4">
                     <div>

@@ -98,16 +98,25 @@ const Contactanos = () => {
                         ¡Contáctanos ahora!
                     </p>
                     <form onSubmit={handleSubmit}>
-                        <input type="text" value={contact.nombre} className="form-control" name="nombre" placeholder="Nombre Completo" onChange={handleChange} autoFocus />
-
+                        <input required type="text" value={contact.nombre} className="form-control" name="nombre" placeholder="Nombre Completo" onChange={handleChange} autoFocus />
+                        <div className="invalid-feedback">
+                            Porfavor, completar los campos.
+                        </div>
                         <br />
-                        <input type="email" value={contact.email} className="form-control" name="email" placeholder="E - mail" onChange={handleChange} />
-
+                        <input required type="email" value={contact.email} className="form-control" name="email" placeholder="E - mail" onChange={handleChange} />
+                        <div className="invalid-feedback">
+                            Porfavor, completar los campos.
+                        </div>
                         <br />
-                        <input type="text" value={contact.telefono} className="form-control" name="telefono" placeholder="Teléfono" onChange={handleChange} />
-
+                        <input required type="text" value={contact.telefono} className="form-control" name="telefono" placeholder="Teléfono" onChange={handleChange} />
+                        <div className="invalid-feedback">
+                            Porfavor, completar los campos.
+                        </div>
                         <br />
-                        <textarea name="mensaje" value={contact.mensaje} rows={4} className="form-control" placeholder="Mensaje" onChange={handleChange}></textarea>
+                        <textarea required name="mensaje" value={contact.mensaje} rows={4} className="form-control" placeholder="Mensaje" onChange={handleChange}></textarea>
+                        <div className="invalid-feedback">
+                            Porfavor, completar los campos.
+                        </div>
                         <br />
                         <button className="btn btn-block w-100 btn-info">
                             Enviar
