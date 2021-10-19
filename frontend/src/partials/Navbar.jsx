@@ -42,14 +42,9 @@ const Navbar = () => {
                             <Link className="nav-link active" aria-current="page" to="/contactanos">CONTÁCTANOS</Link>
                         </li>
                     </ul>
-                    <div>
-                        <Link to="/login" type="button" className="btn btn-primary mx-2"><FontAwesomeIcon
-                            className="mx-2"
-                            icon={faSignInAlt}
-                            color="#fff"
-                            size="lg"
-                        />INICIAR SESIÓN</Link>
-                        <button type="button" className="btn btn-info">REGISTRATE</button>
+                    <div className="d-flex">
+                        <input className="form-control me-sm-2" type="text" placeholder="Buscar" style={{ border: "solid 1px #000" }} />
+                        <button className="btn btn-info my-2 my-sm-0" type="submit">Buscar</button>
                     </div>
                 </div>
             </div>
