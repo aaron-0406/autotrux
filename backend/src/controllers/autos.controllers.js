@@ -65,7 +65,6 @@ controller_auto.getAutoByCodigo = async (req, res) => {
 //post("/")
 controller_auto.createAuto = async (req, res) => {
     // Guardando en la bd
-    console.log(req.body);
     try {
         const rows = await pool.query("INSERT INTO vehiculo SET ?", [req.body]);
         if (rows.affectedRows !== 1) return res.json({ error: "Ocurrió un error." });
