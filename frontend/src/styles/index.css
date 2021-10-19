@@ -1,13 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.login-img {
+  max-width: 350px;
+  box-shadow: 5px 5px 20px 0px #c5c5ca;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.login form button {
+  color: #fff;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.login form button:hover {
+  color: #fff;
+  box-shadow: 5px 5px 5px gray;
 }
