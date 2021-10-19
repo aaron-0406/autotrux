@@ -3,6 +3,21 @@ import React from 'react';
 const Camionetas = () => {
     return (
         <div className="container p-3">
+
+            <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog">
+                <div className="modal-content">
+                <div className="modal-header">
+                    <h5 className="modal-title" id="exampleModalLabel">Reservar</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                </div>
+                <div className="modal-body">
+                    <center><iframe frameBorder={0} height={445} width={350} scrolling="yes" src="https://www.christopher-carrasco.ga" /><center>
+                    </center></center></div>
+                </div>
+            </div>
+            </div>
+
             <h1 className="text-center">CAMIONETAS</h1>
             <div className="container p-3">
                 <div className="row row-cols-1 row-cols-md-2 g-4">
@@ -14,7 +29,9 @@ const Camionetas = () => {
                         <h4 className="text-center">"costo_camioneta"</h4>
                         <h5 className="text-center">"estado_camioneta"</h5>
                         <div className="text-center">
-                        <a href="#" className="btn btn-primary">Reservar</a>
+                            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Reservar
+                            </button>
                         </div>
                     </div>
                     <ul className="list-group list-group-flush">
@@ -39,7 +56,9 @@ const Camionetas = () => {
                         <h4 className="text-center">"costo_camioneta"</h4>
                         <h5 className="text-center">"estado_camioneta"</h5>
                         <div className="text-center">
-                        <a href="#" className="btn btn-primary">Reservar</a>
+                            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Reservar
+                            </button>
                         </div>
                     </div>
                     <ul className="list-group list-group-flush">
