@@ -1,4 +1,4 @@
-const llaves = require("./config");
+const llaves = require("./config.js");
 module.exports = {
     database: {
         host: llaves.DATABASE_HOST,
