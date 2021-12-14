@@ -6,7 +6,7 @@ controller_reserva.getReservas = async (req, res) => {
   try {
     if (req.query.page && req.query.id) {
       const data = await pool.query(
-        `SELECT * FROM reservas WHERE usuario_id_usuario=${req.query.id} ORDER BY id_reservas ASC`
+        `SELECT * FROM reservas WHERE usuario_id_usuario=${req.query.id} ORDER BY id_reservas DESC`
       );
       const cantidadDatos = 10;
       const pagina = (parseInt(req.query.page) - 1) * cantidadDatos;
@@ -26,7 +26,7 @@ controller_reserva.getReservas = async (req, res) => {
         r.fecha_fin AS fecha_fin,
         r.estado_reserva AS estado_reserva,
         r.costo_reserva AS costo_reserva FROM reservas r INNER JOIN usuario u 
-        ON (r.usuario_id_usuario = u.id_usuario) ORDER BY id_reservas ASC`
+        ON (r.usuario_id_usuario = u.id_usuario) ORDER BY id_reservas DESC`
       );
       const cantidadDatos = 10;
       const pagina = (parseInt(req.query.page) - 1) * cantidadDatos;

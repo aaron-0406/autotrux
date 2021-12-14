@@ -72,23 +72,12 @@ const DashboardAside: React.FC = () => {
                 <p>Autos</p>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/dashboard/camionetas" className="nav-link">
-                <p>Camionetas</p>
-              </Link>
-            </li>
 
             <li className="nav-header">SITIO WEB</li>
             <li className="nav-item">
               <Link to="/dashboard/contactanos" className="nav-link">
                 <i className="nav-icon far fa-envelope" />
                 <p>Mensajes de Contáctanos</p>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/dashboard/reclamaciones" className="nav-link">
-                <i className="nav-icon fas fa-book-open" />
-                <p>Libro de Reclamaciones</p>
               </Link>
             </li>
           </ul>

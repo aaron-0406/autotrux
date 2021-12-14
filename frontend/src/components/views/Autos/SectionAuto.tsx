@@ -27,7 +27,7 @@ const SectionAuto: FunctionComponent<SectionAutoProps> = (
         <strong>Marca:</strong> {props.marca}
       </p>
       <p className="my-0">
-        <strong>Costo:</strong> {props.costo}
+        <strong>Costo:</strong> ${props.costo}
       </p>
       <button
         type="button"

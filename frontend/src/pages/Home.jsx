@@ -7,7 +7,6 @@ import slide3 from "../img/slide3.png";
 
 import aside0 from "../img/aside0.png";
 import aside1 from "../img/aside1.png";
-import aside2 from "../img/aside2.png";
 
 const Home = () => {
   return (
@@ -54,19 +53,12 @@ const Home = () => {
             <img src={aside0} className="img-fluid" alt="Renta ahora" />
           </div>
         </div>
-        <div className="row text-center p-3">
-          <div className="col-md-6 p-3">
+        <div className="row text-center p-4">
+          <div className="col-md-12 p-4">
             <h2 className="text-center">AUTOS</h2>
-            <img src={aside1} className="img-fluid" alt="Autos" />
+            <img src={aside1} className="img-fluid w-50" alt="Autos" />
             <Link to="/autos" className="btn btn-primary">
               Autos
-            </Link>
-          </div>
-          <div className="col-md-6 p-3">
-            <h2 className="text-center">CAMIONETAS</h2>
-            <img src={aside2} className="img-fluid" alt="Camionetas" />
-            <Link to="/camionetas" className="btn btn-primary">
-              Camionetas
             </Link>
           </div>
         </div>
