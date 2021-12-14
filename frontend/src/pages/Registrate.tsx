@@ -101,6 +101,9 @@ const Registrate: FunctionComponent<RegistrateProps> = () => {
                   autoFocus
                   onChange={handleInputChange}
                   required
+                  pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{3, 50}"
+                  minLength={3}
+                  maxLength={50}
                 />
               </div>
               <div className="mb-3">
@@ -112,6 +115,9 @@ const Registrate: FunctionComponent<RegistrateProps> = () => {
                   placeholder="Apellidos"
                   onChange={handleInputChange}
                   required
+                  pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{3, 50}"
+                  minLength={3}
+                  maxLength={50}
                 />
               </div>
               <div className="mb-3">
@@ -123,6 +129,8 @@ const Registrate: FunctionComponent<RegistrateProps> = () => {
                   placeholder="DNI"
                   onChange={handleInputChange}
                   required
+                  pattern="[0-9]{8}"
+                  maxLength={8}
                 />
               </div>
               <div className="mb-3">
@@ -134,6 +142,8 @@ const Registrate: FunctionComponent<RegistrateProps> = () => {
                   placeholder="Teléfono"
                   onChange={handleInputChange}
                   required
+                  pattern="[0-9]{5, 9}"
+                  maxLength={9}
                 />
               </div>
               <div className="mb-3">
@@ -156,6 +166,7 @@ const Registrate: FunctionComponent<RegistrateProps> = () => {
                   placeholder="Contraseña"
                   onChange={handleInputChange}
                   required
+                  minLength={5}
                 />
               </div>
               <button className="btn btn-info w-100 fw-bold">
