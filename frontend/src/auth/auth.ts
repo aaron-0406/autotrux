@@ -1,28 +1,28 @@
 interface Auth {
-    loged: boolean;
-    rango?: string;
+  loged: boolean;
+  rol?: string;
 }
 class Auth {
-    constructor() {
-        this.loged = false;
-        this.rango = "2";
-    }
-    sigIn() {
-        this.loged = true;
-    }
-    logOut() {
-        this.loged = false;
-    }
-    isAuth() {
-        return this.loged;
-    }
-    getRango() {
-        return this.rango;
-    }
-    setRango(rango: string | undefined) {
-        this.rango = rango;
-        //rango=1 -> administrador
-    }
+  constructor() {
+    this.loged = false;
+    this.rol = "CLIENTE";
+  }
+  sigIn() {
+    this.loged = true;
+  }
+  logOut() {
+    this.loged = false;
+  }
+  isAuth() {
+    return this.loged;
+  }
+  getRango() {
+    return this.rol;
+  }
+  setRango(rol: string | undefined) {
+    this.rol = rol;
+    //rango=1 -> ADMINISTRADOR
+  }
 }
 
 export default new Auth();

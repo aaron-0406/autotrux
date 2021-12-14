@@ -8,7 +8,7 @@ controller_auto.getAutos = async (req, res) => {
       const data = await pool.query(
         `SELECT * FROM vehiculo WHERE (placa_vehiculo LIKE '%${req.query.keyword}%') ORDER BY id_vehiculo DESC`
       );
-      const cantidadDatos = 12;
+      const cantidadDatos = 10;
       const pagina = (parseInt(req.query.page) - 1) * cantidadDatos;
       return res.json({
         success: "Datos obtenidos",
@@ -27,7 +27,7 @@ controller_auto.getAutos = async (req, res) => {
       const data = await pool.query(
         `SELECT * FROM vehiculo ORDER BY id_vehiculo DESC`
       );
-      const cantidadDatos = 12;
+      const cantidadDatos = 10;
       const pagina = (parseInt(req.query.page) - 1) * cantidadDatos;
       return res.json({
         success: "Datos obtenidos",
@@ -46,7 +46,7 @@ controller_auto.getAutos = async (req, res) => {
 controller_auto.getAll = async (req, res) => {
   try {
     const datos = await pool.query(
-      `SELECT * FROM vehiculo WHERE tipo_vehiculo='${req.query.vehiculo}'`
+      `SELECT * FROM vehiculo WHERE tipo_vehiculo='${req.query.vehiculo}' AND estado_vehiculo='HABILITADO'`
     );
     return res.json({ success: "Datos obtenidos", autos: datos });
   } catch (error) {
@@ -78,13 +78,11 @@ controller_auto.getCount = async (req, res) => {
 controller_auto.getAutoByCodigo = async (req, res) => {
   try {
     const expediente = await pool.query(
-      "SELECT * FROM vehiculo WHERE placa_vehiculo = ?",
+      "SELECT * FROM vehiculo WHERE id_vehiculo = ?",
       [req.params.id]
     );
     if (expediente[0]) {
-      if (expediente[0].habilitado == "1")
-        return res.json({ autos: expediente[0], success: "Encontrado" });
-      return res.json({ error: "Auto inhabilitado" });
+      return res.json({ autos: expediente[0], success: "Encontrado" });
     }
     return res.json({ error: "No existe tal auto" });
   } catch (error) {

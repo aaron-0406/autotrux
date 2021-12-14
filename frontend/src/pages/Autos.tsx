@@ -10,9 +10,30 @@ import Vehiculo from "../interfaces/Vehiculo";
 import SectionAuto from "../components/views/Autos/SectionAuto";
 import ModalAuto from "../components/views/Autos/ModalAuto";
 
+const initialVehiculo: Vehiculo = {
+  id_vehiculo: 0,
+  tipo_vehiculo: "",
+  placa_vehiculo: "",
+  modelo_vehiculo: "",
+  marca_vehiculo: "",
+  color_vehiculo: "",
+  anio_vehiculo: "",
+  transmision_vehiculo: "",
+  combustible_vehiculo: "",
+  motor_vehiculo: "",
+  traccion_vehiculo: "",
+  potencia_vehiculo: "",
+  torque_vehiculo: "",
+  rendimiento_vehiculo: "",
+  asientos_vehiculo: "",
+  costo_vehiculo: "",
+  estado_vehiculo: "",
+  foto_vehiculo: "",
+};
+
 const Autos = () => {
   //Cargar datos
-  const [auto, setAuto] = useState<Vehiculo>();
+  const [auto, setAuto] = useState<Vehiculo>(initialVehiculo);
   const [autos, setAutos] = useState<Vehiculo[]>([]);
 
   const getAutos = async () => {
@@ -21,8 +42,10 @@ const Autos = () => {
     setAutos(res.data.autos);
   };
 
-  const changeAuto = (id: number | undefined) => {
-    const autoEncontrado = autos.find((element) => element.id_vehiculo === id);
+  const changeAuto = (id: any) => {
+    const autoEncontrado: any = autos.find(
+      (element) => element.id_vehiculo === id
+    );
     setAuto(autoEncontrado);
   };
 
@@ -41,7 +64,7 @@ const Autos = () => {
         <div className="row">
           {autos.map((auto: Vehiculo) => {
             return (
-              <div className="col-md-4">
+              <div className="col-md-4" key={auto.id_vehiculo}>
                 <SectionAuto
                   key={auto.id_vehiculo}
                   id={auto.id_vehiculo}
